@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on win32)" generated="20191127 00:09:52.119" rpa="false">
+<suite id="s1" name="EverRun-Stage" source="C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Tests\EverRun-Stage.robot">
+<test id="s1-t1" name="Declare and set variables">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Starting</arg>
+</arguments>
+<status status="PASS" starttime="20191127 00:09:53.311" endtime="20191127 00:09:53.312"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191127 00:09:53.313" level="INFO">Opening browser 'gc' to base url 'http://10.200.129.205'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" starttime="20191127 00:10:01.621" endtime="20191127 00:10:06.263"></status>
+</kw>
+<msg timestamp="20191127 00:10:06.265" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20191127 00:10:06.299" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=78.0.3904.108)
+</msg>
+<status status="FAIL" starttime="20191127 00:09:53.312" endtime="20191127 00:10:06.300"></status>
+</kw>
+<status status="FAIL" starttime="20191127 00:09:53.310" endtime="20191127 00:10:06.301"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${TEST_STATUS}</arg>
+</arguments>
+<msg timestamp="20191127 00:10:06.310" level="INFO">FAIL</msg>
+<status status="PASS" starttime="20191127 00:10:06.310" endtime="20191127 00:10:06.310"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>set test variable</arg>
+<arg>${Status}</arg>
+<arg>p</arg>
+</arguments>
+<status status="PASS" starttime="20191127 00:10:06.311" endtime="20191127 00:10:06.311"></status>
+</kw>
+<kw name="Run Keyword If Test Failed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<arguments>
+<arg>set test variable</arg>
+<arg>${Status}</arg>
+<arg>f</arg>
+</arguments>
+<kw name="Set Test Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<arguments>
+<arg>${Status}</arg>
+<arg>f</arg>
+</arguments>
+<msg timestamp="20191127 00:10:06.324" level="INFO">${Status} = f</msg>
+<status status="PASS" starttime="20191127 00:10:06.312" endtime="20191127 00:10:06.325"></status>
+</kw>
+<status status="PASS" starttime="20191127 00:10:06.311" endtime="20191127 00:10:06.326"></status>
+</kw>
+<kw name="Run Keyword If Test Passed" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if the test passed.</doc>
+<arguments>
+<arg>Download Output File</arg>
+</arguments>
+<status status="PASS" starttime="20191127 00:10:06.327" endtime="20191127 00:10:06.327"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Closing Browser</arg>
+</arguments>
+<status status="PASS" starttime="20191127 00:10:06.328" endtime="20191127 00:10:06.330"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<errors>
+<msg timestamp="20191127 00:09:52.949" level="ERROR">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Resources\EverRunApp.robot': Importing test library 'SSHLibrary' failed: ModuleNotFoundError: No module named 'SSHLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\administrator\appdata\local\programs\python\python38\python38.zip
+  c:\users\administrator\appdata\local\programs\python\python38\DLLs
+  c:\users\administrator\appdata\local\programs\python\python38\lib
+  c:\users\administrator\appdata\local\programs\python\python38
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20191127 00:09:53.022" level="WARN">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Resources\PO\PM-Page.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+<msg timestamp="20191127 00:09:53.081" level="WARN">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Resources\PO\VM-Page.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+<msg timestamp="20191127 00:09:53.121" level="WARN">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Resources\PO\VM-Page.robot': Escaping empty cells with '\' before line continuation marker '...' is deprecated. Remove escaping before Robot Framework 3.2.</msg>
+<msg timestamp="20191127 00:09:53.177" level="ERROR">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Resources\PO\RemoteExec.robot': Importing test library 'SSHLibrary' failed: ModuleNotFoundError: No module named 'SSHLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\administrator\appdata\local\programs\python\python38\python38.zip
+  c:\users\administrator\appdata\local\programs\python\python38\DLLs
+  c:\users\administrator\appdata\local\programs\python\python38\lib
+  c:\users\administrator\appdata\local\programs\python\python38
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20191127 00:09:53.270" level="ERROR">Error in file 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Tests\EverRun-Stage.robot': Importing test library 'C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Libraries\Perform_TLO.py' failed: ModuleNotFoundError: No module named 'testlink'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Libraries\Perform_TLO.py", line 1, in &lt;module&gt;
+    from TestLinkOps import *
+  File "C:\Users\Administrator\Desktop\ztC-everRun_GUI_Automation-master\Libraries\TestLinkOps.py", line 10, in &lt;module&gt;
+    import testlink
+PYTHONPATH:
+  C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts\robot.exe
+  c:\users\administrator\appdata\local\programs\python\python38\python38.zip
+  c:\users\administrator\appdata\local\programs\python\python38\DLLs
+  c:\users\administrator\appdata\local\programs\python\python38\lib
+  c:\users\administrator\appdata\local\programs\python\python38
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\win32\lib
+  c:\users\administrator\appdata\local\programs\python\python38\lib\site-packages\Pythonwin</msg>
+<msg timestamp="20191127 00:10:06.265" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20191127 00:10:08.355" level="ERROR">Execution stopped by user.</msg>
+</errors>
+</robot>

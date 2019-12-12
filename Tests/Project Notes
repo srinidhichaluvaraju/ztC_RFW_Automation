@@ -1,0 +1,101 @@
+
+#====================================================================================================
+#                       Robot Framework User Guide:
+# https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html
+
+#                       Automatic Variables :
+# A number of automatic variables are available that you can make use of:
+# https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#automatic-variables
+
+#                       How to execute RFW test cases?
+#robot -d results tests/EverRun-Stage.robot
+#robot -d results -i DevTest1 tests/EverRun-Stage.robot
+#robot --reporttitle "Babybird Test Report"  --logtitle  "Babybird Test Log"
+#robot --critical 100iS -c 100iD   #--critical=-c
+#robot --noncritical 110iS -n 100iS
+#robot --timestampouts  110iD -t 100iS
+#robot -d results --randomize tests [suites,all,none]  tests/EverRun-Stage.robot
+#robot -d results --loglevel [ or -L ] debug tests/EverRun-Stage.robot  OR  Set Log Level  Debug (in the script)
+#Overriding variable values from command line.
+#robot -v HOST:my.server.com -v USERNAME:johndoe -v PASSWORD:secretpasswd executing_commands.txt
+ToDo  robot --variable HOST:localhost:7272
+ToDo  --variablefile path/to/variables.py
+
+#====================================================================================================
+
+# Test Case Naming Conventions:
+# Forcing script execution order:
+# Script files normally execute in alphabetic order. You can change it by prefixing xx__ to their names.
+# 01__Feature6.robot, 02__Feature3.robot,  03__Feature11.robot
+# Same rule holds good for directory names.
+# Use Refactor==> Rename feature for renaming files and directories.
+
+#====================================================================================================
+
+                        Keeping Your Tools Up to date:
+
+As you cruise ahead in project execution automating more and more test cases you
+will need to upgrade your tools to the latest available version, add modules required
+and remove unwanted modules. Hence a continuous housekeeping is a must to maintain
+ a reliable project environment. Here are a few updates to consider:
+
+ 1. Update Python and pip.
+ 2. Add/Remove/Upgrade Libraries
+ 3. Upgrade to current Browser versions.
+ 4. Upgrade to latest Webdriver versions.
+ 5. Update PyCharm and Intellibot.
+
+o  1. Update Python and pip.
+       You should consider upgrading pip version via the 'python -m pip install --upgrade pip' command.
+       But don't use pip to upgrade Python itself. Instead use an installer downloaded from https://www.python.org/downloads/.
+       You can upgrade your Python 2.7.x version or 3.x.x version. But using latest Python 3 version is recommended.
+       Use "pip list" command to see all the versions of various tools installed. It is advantageous if you would maintain a working
+       pip list version info in the project itself. Upon upgrade if any tool version causes failures, you can always
+       revert back to the working version by looking at it on the pip list output.
+
+o  2. Add/Remove/Upgrade Libraries.
+      pip install --upgrade robotframework
+      pip install --upgrade robotframework-SeleniumLibrary
+      (When SeleniumLibrary is updated it takes care of its dependencies viz Selenium, decorator and docutils as well.)
+      pip install --upgrade requests
+      (This is for our API calls)
+       Compare the current version of any library before installing it. Google for the version or go to www.robotframework.org.
+       You can even check the version at pypi.python.org from where pip tool will fetch the packages.
+       You might want to copy the libary name from pypi and feed it to pip install.
+
+o  3. Update current browser versions.
+        Download current browser versions from their respective websites and install them.
+        Firefox browser that used to be compatible out of the box with Selenium does not seem to remain so with
+        Robot Framework 3.0 version. You may have to download webdrivers for Firefox too to work with RFW 3.0.
+        However this is not mandatory as your application support and AUT needs (project requirements) could have
+         a say on browser versions for testing.
+
+o  4.  Upgrade to latest Webdriver versions.
+        Download latest Webdriver versions (from www.seleniumhq.org/downloads; take 32 bit versions) for the various browsers you are using
+        and copy them to C:\bin directory where your previous webdrivers are living.
+        Before you overwrite them it is a good practice to rename them to indicate their versions appropriately and move
+        them to an archive directory. Just in case any problems crop up with the new webdriver version,  you can always
+        revert back to the old webdriver version.
+        Finally run a few tests on the respective browser to ensure they are working fine with the new webdriver version.
+
+o  5.  What to do if you have problems?
+        OpenSource systems may have compatibility issues some times. If your script is not working with new library version or
+        webdriver versions all you can do is to use pip uninstall new_library_version and reinstall previous version of library
+        or webdriver like so.. pip install old_library_version==1.21.  As said earlier for webdrivers you need to maintain an
+        archive of old webdrivers and revert back to them.
+
+o   6. Update PyCharm and Intellibot.
+       Download an upgraded version of PyCharm from here : https://www.jetbrains.com/pycharm/download/#section=windows   .
+       Grab Community edition. Again it is advisable to archive old version installers as a best practice. Make sure you have a github
+       repository that you can use to create projects from. It is a good practice to check in code at the end of the day to a
+       source control software such as git.
+       Once installed (Installation options are chosen carefully) go to File-->Settings-->Plugins and type intellibot and Install it.
+       Restart PyCharm IDE. After restarting when you open your project you should see all your libraries under External Libraries section.
+       If you don't find them then all your keywords will show up with red wavy underlines. In that case try to create a new project and see if
+       the problem goes away. Then you can copy all your project file structure under the new Project (except .idea directory).
+       Run a few tests to verify they pass and all is well.
+
+
+
+
+
